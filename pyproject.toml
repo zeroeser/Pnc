@@ -8,6 +8,12 @@ authors = ["Pascal"]
 python = "^3.9"
 fastapi = "^0.79.0"
 sqlalchemy = "^1.4.39"
+alembic = "^1.8.1"
+uvicorn = "^0.18.2"
+pydantic = { extras = ["dotenv"], version = "^1.9.1" }
+psycopg2 = "^2.9.3"
+Jinja2 = "^3.1.2"
+sqlalchemy_mptt = "^0.2.5"
 
 
 [tool.poetry.dev-dependencies]
@@ -18,13 +24,8 @@ prospector = { version = "^1.7.7", extras = ["with_bandit", "with_mypy"] }
 pre-commit = "^2.19.0"
 httpx = "^0.23.0"
 types-python-dateutil = "^2.8.18"
-faker = "^13.13.0"
 types-requests = "^2.28.0"
 
-
-[[tool.poetry.source]]
-name = "gitlab"
-url = "https://gitlab.steplabs.ru/api/v4/groups/53/-/packages/pypi/simple"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

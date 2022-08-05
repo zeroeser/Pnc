@@ -6,8 +6,6 @@ ignore-paths:
   - alembic
 
 pylint:
-  disable:
-    - logging-fstring-interpolation
 
 mypy:
   run: true
