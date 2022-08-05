@@ -9,7 +9,7 @@ from app.models import Character
 
 router = APIRouter()
 
-templates = Jinja2Templates(directory="static")
+templates = Jinja2Templates(directory="front/templates")
 
 
 @router.get(

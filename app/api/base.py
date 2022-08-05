@@ -25,10 +25,10 @@ def init_fast_api(
         health_check_callback,
         response_model=HealthState,
         methods=["get"],
-        summary="Получение статуса сервиса",
+        summary="Get service status",
         tags=["Maintenance"],
     )
-    app.mount("/static", StaticFiles(directory="static"), name="static")
+    app.mount("/front", StaticFiles(directory="front"), name="static")
 
     app.include_router(router, prefix=settings.API_PATH)
 
