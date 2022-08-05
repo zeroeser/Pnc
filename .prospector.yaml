@@ -1,0 +1,22 @@
+doc-warnings: false
+max-line-length: 120
+test-warnings: true
+
+ignore-paths:
+  - alembic
+
+pylint:
+
+mypy:
+  run: true
+  options:
+    ignore-missing-imports: true
+    follow-imports: normal
+
+bandit:
+  run: true
+
+pydocstyle:
+  disable:
+    - D203
+    - D213

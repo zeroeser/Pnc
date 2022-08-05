@@ -1,0 +1,22 @@
+fail_fast: false
+repos:
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        name: isort (python)
+        args: [ "--profile", "black", "--filter-files" ]
+  - repo: https://github.com/ambv/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+        language_version: python3.9
+  - repo: local
+    hooks:
+      - id: prospector
+        name: prospector
+        language: system
+        entry: "poetry run prospector"
+        files: '\.py$'
+        args: [ '--profile=.prospector', '--profile-path=.' ]
+

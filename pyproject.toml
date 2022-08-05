@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "PNC"
+version = "0.1.0"
+description = "Web wiki version"
+authors = ["Pascal"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.79.0"
+sqlalchemy = "^1.4.39"
+alembic = "^1.8.1"
+uvicorn = "^0.18.2"
+pydantic = { extras = ["dotenv"], version = "^1.9.1" }
+psycopg2 = "^2.9.3"
+Jinja2 = "^3.1.2"
+sqlalchemy_mptt = "^0.2.5"
+
+
+[tool.poetry.dev-dependencies]
+coverage = "^6.4.1"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+prospector = { version = "^1.7.7", extras = ["with_bandit", "with_mypy"] }
+pre-commit = "^2.19.0"
+httpx = "^0.23.0"
+types-python-dateutil = "^2.8.18"
+types-requests = "^2.28.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
